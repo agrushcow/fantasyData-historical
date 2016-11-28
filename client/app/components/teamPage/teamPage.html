@@ -1,0 +1,149 @@
+<navbar></navbar>
+<div class="team-content">
+	<div class="team-top">
+		<div class="team-heading">
+	  		<h1>{{teamPage.teamName}} | Report Card</h1>
+	  </div>
+	</div>
+
+  <div class="wrapper">
+    <div class="table team-table">
+      <div class="row header">
+        <div class="cell tp">
+          <span>Category</span>
+        </div>
+        <div class="cell">
+          <span>Rank</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.passYds">
+          <span>Passing Yards</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.passYds">
+          <span>{{teamPage.passYdsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.rushYds">
+          <span>Rushing Yards</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.rushYds">
+          <span>{{teamPage.rushYdsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.score">
+          <span>Score</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.score">
+          <span>{{teamPage.scoreRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.tds">
+          <span>TD's</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.tds">
+          <span>{{teamPage.tdsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.toDiff">
+          <span>Turnover Differential</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.toDiff">
+          <span>{{teamPage.toDiffRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.opponentPassingYards">
+          <span>Opponent Passing Yards</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.opponentPassingYards">
+          <span>{{teamPage.opponentPassingYardsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.opponentRushingYards">
+          <span>Opponent Rushing Yards</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.opponentRushingYards">
+          <span>{{teamPage.opponentRushingYardsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.offYds">
+          <span>Offensive Yards</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.offYds">
+          <span>{{teamPage.offYdsRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.offYdsPlay">
+          <span>Offensive Yards per Play</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.offYdsPlay">
+          <span>{{teamPage.offYdsPlayRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.takeways">
+          <span>Takeaways</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.takeways">
+          <span>{{teamPage.takewaysRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.takeways">
+          <span>Takeaways</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.takeways">
+          <span>{{teamPage.takewaysRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.passYdsAtt">
+          <span>Pass Yards per Attempt</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.passYdsAtt">
+          <span>{{teamPage.passYdsAttRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.passRtg">
+          <span>Passer Rating</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.passRtg">
+          <span>{{teamPage.passRtgRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.thirdDownPerc">
+          <span>Third Down %</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.thirdDownPerc">
+          <span>{{teamPage.thirdDownPercRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.penalties">
+          <span>Penalties</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.penalties">
+          <span>{{teamPage.penaltiesRank}}</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell tp" ng-if="teamPage.statsFields.firstDowns">
+          <span>First Downs</span>
+        </div>
+        <div class="cell tp" ng-if="teamPage.statsFields.firstDowns">
+          <span>{{teamPage.firstDownsRank}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

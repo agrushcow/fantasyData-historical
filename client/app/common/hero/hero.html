@@ -1,0 +1,43 @@
+<section class="hero">
+	<div class="content">
+		<p>This app is designed for the NFL historians. Using fantasydata's api, historical team statistics are presented in an elegant, and highly customizable format. It gives users the ability to present data spanning from this years Super Bowl Winning Denver Broncos, all the way back to the historical 1985 Bears and the teams that were left in their wake.</p>
+		<p>Now try it below! Just select the year you want to see data for. A preset of eight categories will be displayed. You can change the data on the next page to suit your needs. From there you can sort teams by ranking, or select them and see how they stack up historically.</p>
+	</div>
+	<a ui-sref="stats">2015</a>
+<form name="yearsForm" class="years-form">
+	<select name="yearSelect" ng-model="data.yearSelect" text="Year">
+		<option value="" disabled selected>Year</option>
+		<option value="option-1">2015</option>
+		<option value="option-2">2014</option>
+		<option value="option-3">2013</option>
+		<option value="option-4">2012</option>
+		<option value="option-5">2011</option>
+		<option value="option-6">2010</option>
+		<option value="option-7">2009</option>
+		<option value="option-8">2008</option>
+		<option value="option-9">2007</option>
+		<option value="option-10">2006</option>
+<!-- 		<option value="option-11">2005</option>
+		<option value="option-12">2004</option>
+		<option value="option-13">2003</option>
+		<option value="option-14">2002</option>
+		<option value="option-15">2001</option>
+		<option value="option-16">2000</option>
+		<option value="option-17">1999</option>
+		<option value="option-18">1998</option>
+		<option value="option-19">1997</option>
+		<option value="option-20">1996</option>
+		<option value="option-21">1995</option>
+		<option value="option-22">1994</option>
+		<option value="option-23">1993</option>
+		<option value="option-24">1992</option>
+		<option value="option-25">1991</option>
+		<option value="option-26">1990</option>
+		<option value="option-27">1989</option>
+		<option value="option-28">1988</option>
+		<option value="option-29">1987</option>
+		<option value="option-30">1986</option>
+		<option value="option-31">1985</option> -->
+	</select>
+</form>
+</section>

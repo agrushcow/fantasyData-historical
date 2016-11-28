@@ -92,12 +92,12 @@
       </div>
     </div>
 
-    <div class="row" ng-repeat="team in stats.teamData|orderBy:stats.orderByField:stats.reverseSort">
+    <div class="row" ng-repeat="team in stats.teams|orderBy:stats.orderByField:stats.reverseSort">
       <div class="cell left" id="teamCell">
         <a ui-sref="teamPage({index: team.team})">{{team.team}}</a>
       </div>
       <div class="cell" ng-if="stats.statsFields.passYds">
-        {{team.passYds}}
+        {{team.PassingYards}}
       </div>
       <div class="cell"  ng-if="stats.statsFields.rushYds">
         {{team.rushYds}}

@@ -1,7 +1,11 @@
 class StatsController {
   constructor(StatsService, $rootScope) {
     this.statsFields = StatsService.getStatsFields();
-    this.teamData = StatsService.getAllTeams();
+    StatsService.getAllTeams().then(
+        (data) => {
+        	this.teams = data; 
+        	console.log(this.teams);
+        });
 
     $rootScope.$watch('orderByField', () => {
         this.reverseSort = false;

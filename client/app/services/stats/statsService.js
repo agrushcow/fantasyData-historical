@@ -1,19 +1,19 @@
 class StatsService {
-	constructor($resource) {
-		Object.assign(this, { $resource });
+	constructor($resource, $http) {
+		Object.assign(this, { $resource, $http });
 
         this.statsFields = {
             name:'stats',  
             orderByField: 'team',
             reverseSort: false,
-            passYds: true,
-            rushYds: true,
-            score: true,
-            tds: true,
+            PassingYards: true,
+            RushYards: true,
+            Score: true,
+            Tds: true,
             toDiff: true,
             offYds: false,
             offYdsPlay: false,
-            passYdsAtt: false,
+            PassingYardsAtt: false,
             passRtg: false,
             passRtg: false,
             thirdDownPerc: false,
@@ -23,8 +23,8 @@ class StatsService {
 
 		this.teams = [{
         team: 'ARI',
-        teamName: 'Arizona Cardinals',
-        passYds: 3200,
+        TeamName: 'Arizona Cardinals',
+        PassingYards: 3200,
         rushYds: 1200,
         score: 320,
         tds: 15,
@@ -34,15 +34,15 @@ class StatsService {
         takeways: 25,
         offYds: 4500,
         offYdsPlay: 7,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       },{
         team: 'ATL',
-        teamName: 'Atlanta Falcons',
-        passYds: 3100,
+        TeamName: 'Atlanta Falcons',
+        PassingYards: 3100,
         rushYds: 1100,    
         score: 390,
         tds: 12,
@@ -52,15 +52,15 @@ class StatsService {
         takeways: 28,
         offYds: 4500,
         offYdsPlay: 8,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       },{
         team: 'BAL',
-        teamName: 'Baltimore Ravens',
-        passYds: 3800,
+        TeamName: 'Baltimore Ravens',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -70,15 +70,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'CIN',
-        teamName: 'Cincinnati Bengals',
-        passYds: 3800,
+        TeamName: 'Cincinnati Bengals',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -88,15 +88,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'CHI',
-        teamName: 'Chicago Bears',
-        passYds: 3800,
+        TeamName: 'Chicago Bears',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -106,15 +106,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'CAR',
-        teamName: 'Carolina Panthers',
-        passYds: 3800,
+        TeamName: 'Carolina Panthers',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -124,15 +124,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'MIA',
-        teamName: 'Miami Dolphins',
-        passYds: 3800,
+        TeamName: 'Miami Dolphins',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -142,15 +142,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'NYJ',
-        teamName: 'New York Jets',
-        passYds: 3800,
+        TeamName: 'New York Jets',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -160,15 +160,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'DET',
-        teamName: 'Detroit Lions',
-        passYds: 3800,
+        TeamName: 'Detroit Lions',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -178,15 +178,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'DAL',
-        teamName: 'Dallas Cowboys',
-        passYds: 3800,
+        TeamName: 'Dallas Cowboys',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -196,15 +196,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'DEN',
-        teamName: 'Denver Broncos',
-        passYds: 3800,
+        TeamName: 'Denver Broncos',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -214,15 +214,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'NO',
-        teamName: 'New Orleans Saints',
-        passYds: 3800,
+        TeamName: 'New Orleans Saints',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -232,15 +232,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'TB',
-        teamName: 'Tampa Bay Bucaneers',
-        passYds: 3800,
+        TeamName: 'Tampa Bay Bucaneers',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -250,15 +250,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'SEA',
-        teamName: 'Seattle Seahawks',
-        passYds: 3800,
+        TeamName: 'Seattle Seahawks',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -268,15 +268,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'STL',
-        teamName: 'St. Louis Rams',
-        passYds: 3800,
+        TeamName: 'St. Louis Rams',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -286,15 +286,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'NE',
-        teamName: 'New England Patriots',
-        passYds: 3800,
+        TeamName: 'New England Patriots',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -304,15 +304,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'KC',
-        teamName: 'Kansas City Chiefs',
-        passYds: 3800,
+        TeamName: 'Kansas City Chiefs',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -322,15 +322,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'OAK',
-        teamName: 'Oakland Raiders',
-        passYds: 3800,
+        TeamName: 'Oakland Raiders',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -340,15 +340,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'IND',
-        teamName: 'Indianapolis Colts',
-        passYds: 3800,
+        TeamName: 'Indianapolis Colts',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -358,15 +358,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90       
       }, {
         team: 'JAX',
-        teamName: 'Jacksonville Jaguars',
-        passYds: 3800,
+        TeamName: 'Jacksonville Jaguars',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -376,15 +376,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'TEN',
-        teamName: 'Tennessee Titans',
-        passYds: 3800,
+        TeamName: 'Tennessee Titans',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -394,15 +394,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'BUF',
-        teamName: 'Buffalo Bills',
-        passYds: 3800,
+        TeamName: 'Buffalo Bills',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -412,15 +412,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'PIT',
-        teamName: 'Pittsburgh Steelers',
-        passYds: 3800,
+        TeamName: 'Pittsburgh Steelers',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -430,15 +430,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90   
       }, {
         team: 'CLE',
-        teamName: 'Cleveland Browns',
-        passYds: 3800,
+        TeamName: 'Cleveland Browns',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -448,15 +448,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'HOU',
-        teamName: 'Houston Texans',
-        passYds: 3800,
+        TeamName: 'Houston Texans',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -466,15 +466,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'NYG',
-        teamName: 'New York Giants',
-        passYds: 3800,
+        TeamName: 'New York Giants',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -484,15 +484,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'WAS',
-        teamName: 'Washington Redskins',
-        passYds: 3800,
+        TeamName: 'Washington Redskins',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -502,15 +502,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90      
       }, {
         team: 'PHI',
-        teamName: 'Philadelphia Eagles',
-        passYds: 3800,
+        TeamName: 'Philadelphia Eagles',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -520,15 +520,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'GB',
-        teamName: 'Green Bay Packers',
-        passYds: 3800,
+        TeamName: 'Green Bay Packers',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -538,15 +538,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'MIN',
-        teamName: 'Minesota Vikings',
-        passYds: 3800,
+        TeamName: 'Minesota Vikings',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -556,15 +556,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90
       }, {
         team: 'SF',
-        teamName: 'San Francisco 49ers',
-        passYds: 3800,
+        TeamName: 'San Francisco 49ers',
+        PassingYards: 3800,
         rushYds: 1500,  
         score: 450,
         tds: 18,
@@ -574,15 +574,15 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
         penalties: 90  
       }, {
         team: 'SD',
-        teamName: 'San Diego Chargers',
-        passYds: 3900,
+        TeamName: 'San Diego Chargers',
+        PassingYards: 3900,
         rushYds: 2500,  
         score: 650,
         tds: 32,
@@ -592,7 +592,7 @@ class StatsService {
         takeways: 30,
         offYds: 4500,
         offYdsPlay:5.5,
-        passYdsAtt: 7.5,
+        PassingYardsAtt: 7.5,
         passRtg: 87.5,
         thirdDownPerc: 50,
         firstDowns: 500,
@@ -607,8 +607,14 @@ class StatsService {
     }
 
     getAllTeams() {
-    	return this.teams;
-    }
+        const {$http} = this;
+        return $http.get("https://mysterious-falls-52077.herokuapp.com/season")
+            .then(res => {
+                this.teams = res.data.body;
+                this.calculateRank();
+                    return this.teams;
+            });
+    }   
 
     getTeam(index) {
         for (let i in this.teams) {
@@ -622,10 +628,10 @@ class StatsService {
     calculateRank() {
     	/*Passing yards rank*/
     	this.teams.sort((a, b) => {
-            return b.passYds - a.passYds
+            return b.PassingYards - a.PassingYards
         });
         	for(let i in this.teams) {
-        		this.teams[i].passYdsRank = +i + 1;
+        		this.teams[i].PassingYardsRank = +i + 1;
         	}
     	/*Rushing yards rank*/
     	this.teams.sort((a, b) => {
@@ -675,9 +681,9 @@ class StatsService {
     		this.teams[i].offYdsPlayRank =+ i + 1;
     	}
     	/*Total takeaways rank*/
-    	this.teams.sort((a, b) => {return a.passYdsAtt < b.passYdsAtt});
+    	this.teams.sort((a, b) => {return a.PassingYardsAtt < b.PassingYardsAtt});
     	for(let i in this.teams) {
-    		this.teams[i].passYdsAttRank =+ i + 1;
+    		this.teams[i].PassingYardsAttRank =+ i + 1;
     	}
     	/*Total takeaways rank*/
     	this.teams.sort((a, b) => {return a.passRtg < b.passRtg});

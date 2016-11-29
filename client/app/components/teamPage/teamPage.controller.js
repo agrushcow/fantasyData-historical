@@ -1,12 +1,12 @@
 class TeamPageController {
   constructor(StatsService, $stateParams) {
-    this.name = 'teamPage';
+    this.name = 'TeamPage';
     this.teamIndex = $stateParams.index;
     this.team = StatsService.getTeam(this.teamIndex);
-    this.teamName = this.team.teamName;
+    console.log(this.teamIndex);
     this.statsFields = StatsService.getStatsFields();
 
-    console.log(this.statsFields);
+/*    console.log(this.statsFields);
     this.offYdsRank = this.team.offYds;
     this.offYdsPlayRank = this.team.offYdsPlay;
     this.passYdsAttRank = this.team.passYdsAtt;
@@ -22,7 +22,7 @@ class TeamPageController {
     this.opponentRushingYardsRank = this.team.opponentRushingYards;
     this.takewaysRank = this.team.takeways;
     this.toDiffRank = this.team.toDiff;
-    this.penaltiesRank = this.team.penalties;
+    this.penaltiesRank = this.team.penalties;*/
   }
 }
 

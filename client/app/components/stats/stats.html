@@ -2,18 +2,18 @@
   <div class="content-page">
     <section class="custom-data">
       <div class="stat-options">
-        <button class="option-button" ng-click="stats.statsFields.passYds = !stats.statsFields.passYds" ng-class="{'btn_on':stats.statsFields.passYds, 'btn_off':!stats.statsFields.passYds}">Passing Yards</button>
-        <button class="option-button" ng-click="stats.statsFields.rushYds = !stats.statsFields.rushYds" ng-class="{'btn_on':stats.statsFields.rushYds, 'btn_off':!stats.statsFields.rushYds}">Rushing Yards</button>
-        <button class="option-button" ng-click="stats.statsFields.score = !stats.statsFields.score" ng-class="{'btn_on':stats.statsFields.score, 'btn_off':!stats.statsFields.score}">Total Points</button>
-        <button class="option-button" ng-click="stats.statsFields.tds = !stats.statsFields.tds" ng-class="{'btn_on':stats.statsFields.tds, 'btn_off':!stats.statsFields.tds}">TD's</button>
-        <button class="option-button" ng-click="stats.statsFields.toDiff = !stats.statsFields.toDiff" ng-class="{'btn_on':stats.statsFields.toDiff, 'btn_off':!stats.statsFields.toDiff}">TO Differential</button>
-        <button class="option-button" ng-click="stats.statsFields.offYds = !stats.statsFields.offYds" ng-class="{'btn_on':stats.statsFields.offYds, 'btn_off':!stats.statsFields.offYds}">Off Yards</button>
-        <button class="option-button" ng-click="stats.statsFields.offYdsPlay = !stats.statsFields.offYdsPlay" ng-class="{'btn_on':stats.statsFields.offYdsPlay, 'btn_off':!stats.statsFields.offYdsPlay}">Off Yards/Play</button>
-        <button class="option-button" ng-click="stats.statsFields.passYdsAtt = !stats.statsFields.passYdsAtt" ng-class="{'btn_on':stats.statsFields.passYdsAtt, 'btn_off':!stats.statsFields.passYdsAtt}">Passing Yards/Att</button>
-        <button class="option-button" ng-click="stats.statsFields.passRtg = !stats.statsFields.passRtg" ng-class="{'btn_on':stats.statsFields.passRtg, 'btn_off':!stats.statsFields.passRtg}">Passer Rtg</button>
-        <button class="option-button" ng-click="stats.statsFields.thirdDownPerc = !stats.statsFields.thirdDownPerc" ng-class="{'btn_on':stats.statsFields.thirdDownPerc, 'btn_off':!stats.statsFields.thirdDownPerc}">3rd Down %</button>
-        <button class="option-button" ng-click="stats.statsFields.firstDowns = !stats.statsFields.firstDowns" ng-class="{'btn_on':stats.statsFields.firstDowns, 'btn_off':!stats.statsFields.firstDowns}">1st downs</button>
-        <button class="option-button" ng-click="stats.statsFields.penalties = !stats.statsFields.penalties" ng-class="{'btn_on':stats.statsFields.penalties, 'btn_off':!stats.statsFields.penalties}">Penalties</button>
+        <button class="option-button" ng-click="stats.statsFields.PassingYards = !stats.statsFields.PassingYards" ng-class="{'btn_on':stats.statsFields.PassingYards, 'btn_off':!stats.statsFields.PassingYards}">Passing Yards</button>
+        <button class="option-button" ng-click="stats.statsFields.RushingYards = !stats.statsFields.RushingYards" ng-class="{'btn_on':stats.statsFields.RushingYards, 'btn_off':!stats.statsFields.RushingYards}">Rushing Yards</button>
+        <button class="option-button" ng-click="stats.statsFields.Score = !stats.statsFields.Score" ng-class="{'btn_on':stats.statsFields.Score, 'btn_off':!stats.statsFields.Score}">Total Points</button>
+        <button class="option-button" ng-click="stats.statsFields.Touchdowns = !stats.statsFields.Touchdowns" ng-class="{'btn_on':stats.statsFields.Touchdowns, 'btn_off':!stats.statsFields.Touchdowns}">TD's</button>
+        <button class="option-button" ng-click="stats.statsFields.TurnoverDifferential = !stats.statsFields.TurnoverDifferential" ng-class="{'btn_on':stats.statsFields.TurnoverDifferential, 'btn_off':!stats.statsFields.TurnoverDifferential}">TO Differential</button>
+        <button class="option-button" ng-click="stats.statsFields.OffensiveYards = !stats.statsFields.OffensiveYards" ng-class="{'btn_on':stats.statsFields.OffensiveYards, 'btn_off':!stats.statsFields.OffensiveYards}">Off Yards</button>
+        <button class="option-button" ng-click="stats.statsFields.OffensiveYardsPerPlay = !stats.statsFields.OffensiveYardsPerPlay" ng-class="{'btn_on':stats.statsFields.OffensiveYardsPerPlay, 'btn_off':!stats.statsFields.OffensiveYardsPerPlay}">Off Yards/Play</button>
+        <button class="option-button" ng-click="stats.statsFields.PassingYardsPerAttempt = !stats.statsFields.PassingYardsPerAttempt" ng-class="{'btn_on':stats.statsFields.PassingYardsPerAttempt, 'btn_off':!stats.statsFields.PassingYardsPerAttempt}">Passing Yards/Att</button>
+        <button class="option-button" ng-click="stats.statsFields.PasserRating = !stats.statsFields.PasserRating" ng-class="{'btn_on':stats.statsFields.PasserRating, 'btn_off':!stats.statsFields.PasserRating}">Passer Rtg</button>
+        <button class="option-button" ng-click="stats.statsFields.ThirdDownPercentage = !stats.statsFields.ThirdDownPercentage" ng-class="{'btn_on':stats.statsFields.ThirdDownPercentage, 'btn_off':!stats.statsFields.ThirdDownPercentage}">3rd Down %</button>
+        <button class="option-button" ng-click="stats.statsFields.FirstDowns = !stats.statsFields.FirstDowns" ng-class="{'btn_on':stats.statsFields.FirstDowns, 'btn_off':!stats.statsFields.FirstDowns}">1st downs</button>
+        <button class="option-button" ng-click="stats.statsFields.Penalties = !stats.statsFields.Penalties" ng-class="{'btn_on':stats.statsFields.Penalties, 'btn_off':!stats.statsFields.Penalties}">Penalties</button>
       </div> 
     </section>
 
@@ -21,116 +21,116 @@
   <div class="table">
     <div class="row header">
       <div class="cell left" id="teamHead">
-        <a href="#" ng-click="stats.orderByField='team'; stats.reverseSort = !stats.reverseSort">
-        Team <span ng-show="stats.orderByField == 'team'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+        <a href="#" ng-click="stats.orderByField='Team'; stats.reverseSort = !stats.reverseSort">
+        Team <span ng-show="stats.orderByField == 'Team'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.passYds">
-        <a href="#" ng-click="stats.orderByField='passYds'; stats.reverseSort = false">
+      <div class="cell" ng-if="stats.statsFields.PassingYards">
+        <a href="#" ng-click="stats.orderByField='PassingYards'; stats.reverseSort = false">
           Passing Yards 
         </a>
-          <span ng-show="stats.orderByField == 'passYds'">
+          <span ng-show="stats.orderByField == 'PassingYards'">
               <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
               <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
           </span>
       </div>
 
-      <div class="cell" ng-if="stats.statsFields.rushYds">
-        <a href="#" ng-click="stats.orderByField='rushYds'; stats.reverseSort = !stats.reverseSort">
-        Rushing Yards <span ng-show="stats.orderByField == 'rushYds'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.RushingYards">
+        <a href="#" ng-click="stats.orderByField='RushingYards'; stats.reverseSort = !stats.reverseSort">
+        Rushing Yards <span ng-show="stats.orderByField == 'RushingYards'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.score">
-        <a href="#" ng-click="stats.orderByField='score'; stats.reverseSort = !stats.reverseSort" >
-        Total Points <span ng-show="stats.orderByField == 'score'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.Score">
+        <a href="#" ng-click="stats.orderByField='Score'; stats.reverseSort = !stats.reverseSort" >
+        Total Points <span ng-show="stats.orderByField == 'Score'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.tds">
-        <a href="#" ng-click="stats.orderByField='tds'; stats.reverseSort = !stats.reverseSort">
-          TD's <span ng-show="stats.orderByField == 'tds'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.Touchdowns">
+        <a href="#" ng-click="stats.orderByField='Touchdowns'; stats.reverseSort = !stats.reverseSort">
+          TD's <span ng-show="stats.orderByField == 'Touchdowns'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.toDiff">
-        <a href="#" ng-click="stats.orderByField='toDiff'; stats.reverseSort = !stats.reverseSort">
-        TO Differential <span ng-show="stats.orderByField == 'toDiff'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.TurnoverDifferential">
+        <a href="#" ng-click="stats.orderByField='TurnoverDifferential'; stats.reverseSort = !stats.reverseSort">
+        TO Differential <span ng-show="stats.orderByField == 'TurnoverDifferential'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.offYds">
-        <a href="#" ng-click="stats.orderByField='offYds'; stats.reverseSort = !stats.reverseSort">
-        Offensive Yards <span ng-show="stats.orderByField == 'offYds'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.OffensiveYards">
+        <a href="#" ng-click="stats.orderByField='OffensiveYards'; stats.reverseSort = !stats.reverseSort">
+        Offensive Yards <span ng-show="stats.orderByField == 'OffensiveYards'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.offYdsPlay">
-        <a href="#" ng-click="stats.orderByField='offYdsPlay'; stats.reverseSort = !stats.reverseSort">
-        Offensive Yards Per Play<span ng-show="stats.orderByField == 'offYdsPlay'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.OffensiveYardsPerPlay">
+        <a href="#" ng-click="stats.orderByField='OffensiveYardsPerPlay'; stats.reverseSort = !stats.reverseSort">
+        Offensive Yards Per Play<span ng-show="stats.orderByField == 'OffensiveYardsPerPlay'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.passYdsAtt">
-        <a href="#" ng-click="stats.orderByField='passYdsAtt'; stats.reverseSort = !stats.reverseSort">
-        Passing Yards Per Attempt <span ng-show="stats.orderByField == 'passYdsAtt'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.PassingYardsPerAttempt">
+        <a href="#" ng-click="stats.orderByField='PassingYardsPerAttempt'; stats.reverseSort = !stats.reverseSort">
+        Passing Yards Per Attempt <span ng-show="stats.orderByField == 'PassingYardsPerAttempt'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.passRtg">
-        <a href="#" ng-click="stats.orderByField='passRtg'; stats.reverseSort = !stats.reverseSort">
-        Passer Rtg <span ng-show="stats.orderByField == 'passRtg'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.PasserRating">
+        <a href="#" ng-click="stats.orderByField='PasserRating'; stats.reverseSort = !stats.reverseSort">
+        Passer Rtg <span ng-show="stats.orderByField == 'PasserRating'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.thirdDownPerc">
-        <a href="#" ng-click="stats.orderByField='thirdDownPerc'; stats.reverseSort = !stats.reverseSort">
-        3rd Down % <span ng-show="stats.orderByField == 'thirdDownPerc'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.ThirdDownPercentage">
+        <a href="#" ng-click="stats.orderByField='ThirdDownPercentage'; stats.reverseSort = !stats.reverseSort">
+        3rd Down % <span ng-show="stats.orderByField == 'ThirdDownPercentage'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.firstDowns">
-        <a href="#" ng-click="stats.orderByField='firstDowns'; stats.reverseSort = !stats.reverseSort">
-        1st downs <span ng-show="stats.orderByField == 'firstDowns'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.FirstDowns">
+        <a href="#" ng-click="stats.orderByField='FirstDowns'; stats.reverseSort = !stats.reverseSort">
+        1st downs <span ng-show="stats.orderByField == 'FirstDowns'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.penalties">
-        <a href="#" ng-click="stats.orderByField='penalties'; stats.reverseSort = !stats.reverseSort">
-        Penalties <span ng-show="stats.orderByField == 'penalties'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+      <div class="cell" ng-if="stats.statsFields.Penalties">
+        <a href="#" ng-click="stats.orderByField='Penalties'; stats.reverseSort = !stats.reverseSort">
+        Penalties <span ng-show="stats.orderByField == 'Penalties'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
         </a>
       </div>
     </div>
 
-    <div class="row" ng-repeat="team in stats.teams|orderBy:stats.orderByField:stats.reverseSort">
+    <div class="row" ng-repeat="Team in stats.teams|orderBy:stats.orderByField:stats.reverseSort">
       <div class="cell left" id="teamCell">
-        <a ui-sref="teamPage({index: team.team})">{{team.team}}</a>
+        <a ui-sref="teamPage({index: Team.Team})">{{Team.TeamName}}</a>
       </div>
-      <div class="cell" ng-if="stats.statsFields.passYds">
-        {{team.PassingYards}}
+      <div class="cell" ng-if="stats.statsFields.PassingYards">
+        {{Team.PassingYards}}
       </div>
-      <div class="cell"  ng-if="stats.statsFields.rushYds">
-        {{team.rushYds}}
+      <div class="cell"  ng-if="stats.statsFields.RushingYards">
+        {{Team.RushingYards}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.score">
-        {{team.score}}
+      <div class="cell" ng-if="stats.statsFields.Score">
+        {{Team.Score}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.tds">
-        {{team.tds}}
+      <div class="cell" ng-if="stats.statsFields.Touchdowns">
+        {{Team.Touchdowns}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.toDiff">
-        {{team.toDiff}}
+      <div class="cell" ng-if="stats.statsFields.TurnoverDifferential">
+        {{Team.TurnoverDifferential}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.offYds">
-        {{team.offYds}}
+      <div class="cell" ng-if="stats.statsFields.OffensiveYards">
+        {{Team.OffensiveYards}}
       </div>
-      <div class="cell"  ng-if="stats.statsFields.offYdsPlay">
-        {{team.offYdsPlay}}
+      <div class="cell"  ng-if="stats.statsFields.OffensiveYardsPerPlay">
+        {{Team.OffensiveYardsPerPlay}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.passYdsAtt">
-        {{team.passYdsAtt}}
+      <div class="cell" ng-if="stats.statsFields.PassingYardsPerAttempt">
+        {{Team.PassingYardsPerAttempt}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.passRtg">
-        {{team.passRtg}}
+      <div class="cell" ng-if="stats.statsFields.PasserRating">
+        {{Team.PasserRating}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.thirdDownPerc">
-        {{team.thirdDownPerc}}
+      <div class="cell" ng-if="stats.statsFields.ThirdDownPercentage">
+        {{Team.ThirdDownPercentage}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.firstDowns">
-        {{team.firstDowns}}
+      <div class="cell" ng-if="stats.statsFields.FirstDowns">
+        {{Team.FirstDowns}}
       </div>
-      <div class="cell" ng-if="stats.statsFields.penalties">
-        {{team.penalties}}
+      <div class="cell" ng-if="stats.statsFields.Penalties">
+        {{Team.Penalties}}
       </div>
     </div>
   </div>

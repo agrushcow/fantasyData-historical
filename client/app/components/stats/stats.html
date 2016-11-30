@@ -2,6 +2,486 @@
   <div class="content-page">
     <section class="custom-data">
       <div class="stat-options">
+        <button class="option-button" ng-click="stats.statsFields.Offense = !stats.statsFields.Offense" ng-class="{'btn_on':stats.statsFields.Offense, 'btn_off':!stats.statsFields.Offense}">Offense</button>
+        <button class="option-button" ng-click="stats.statsFields.Defense = !stats.statsFields.Defense" ng-class="{'btn_on':stats.statsFields.Defense, 'btn_off':!stats.statsFields.Defense}">Defense</button>
+        <button class="option-button" ng-click="stats.statsFields.Special = !stats.statsFields.Special" ng-class="{'btn_on':stats.statsFields.Special, 'btn_off':!stats.statsFields.Special}">Special Teams</button>
+        <button class="option-button" ng-click="stats.statsFields.Situational = !stats.statsFields.Situational" ng-class="{'btn_on':stats.statsFields.Situational, 'btn_off':!stats.statsFields.Situational}">Situational</button>
+      </div>
+    </section>
+    <div class="wrapper">
+      <div class="table">
+        <div class="row header">
+          <div class="cell left" id="teamHead">
+            <a href="#" ng-click="stats.orderByField='Team'; stats.reverseSort = !stats.reverseSort">
+          Team <span ng-show="stats.orderByField == 'Team'"><span ng-show="!stats.reverseSort">v</span><span ng-show="stats.reverseSort">^</span></span>
+            </a>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='OffensiveYards'; stats.reverseSort = !stats.reverseSort">
+              Off Yards 
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='PassingYards'; stats.reverseSort = !stats.reverseSort">
+              Pass Yards 
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='PassingYardsPerAttempt'; stats.reverseSort = !stats.reverseSort">
+              Pass Yards Per Att
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='PassingTouchdowns'; stats.reverseSort = !stats.reverseSort">
+              Pass Touchdowns 
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='PasserRating'; stats.reverseSort = !stats.reverseSort">
+              Passer Rtg
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='CompletionPercentage'; stats.reverseSort = !stats.reverseSort">
+              Completion %
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='RushingYards'; stats.reverseSort = !stats.reverseSort">
+              Rush Yards
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='RushingYardsPerAttempt'; stats.reverseSort = !stats.reverseSort">
+              Rush Yards Per Att
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='RushingTouchdowns'; stats.reverseSort = !stats.reverseSort">
+              Rushing TDs
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            <a href="#" ng-click="stats.orderByField='TotalScore'; stats.reverseSort = !stats.reverseSort">
+              Total Score
+            </a>
+              <span ng-show="stats.orderByField == 'Offense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>       
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='OpponentPassingYards'; stats.reverseSort = !stats.reverseSort">
+              Opponent Passing Yards
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='OpponentRushingYards'; stats.reverseSort = !stats.reverseSort">
+              OpponentRushingYards 
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='OpponentFirstDowns'; stats.reverseSort = !stats.reverseSort">
+             OpponentFirstDowns
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='Sacks'; stats.reverseSort = !stats.reverseSort">
+             Sacks
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='QuarterbackHits'; stats.reverseSort = !stats.reverseSort">
+              Quarterback Hits
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='TacklesForLoss'; stats.reverseSort = !stats.reverseSort">
+              Tackles For Loss
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='Takeaways'; stats.reverseSort = !stats.reverseSort">
+              Takeaways
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='FumblesForced'; stats.reverseSort = !stats.reverseSort">
+              Fumbles Forced
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='PassesDefended'; stats.reverseSort = !stats.reverseSort">
+              Passes Defended
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            <a href="#" ng-click="stats.orderByField='OpponentScore'; stats.reverseSort = !stats.reverseSort">
+              Opponent Score
+            </a>
+              <span ng-show="stats.orderByField == 'Defense'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>    
+
+          <!--Start of special teams view-->
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='ReturnYards'; stats.reverseSort = !stats.reverseSort">
+              ReturnYards 
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='PuntReturnYards'; stats.reverseSort = !stats.reverseSort">
+             PuntReturnYards
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='KickReturnYards'; stats.reverseSort = !stats.reverseSort">
+             KickReturnYards
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='KickReturnLong'; stats.reverseSort = !stats.reverseSort">
+              KickReturnLong
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='PuntAverage'; stats.reverseSort = !stats.reverseSort">
+              PuntAverage
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='PuntNetAverage'; stats.reverseSort = !stats.reverseSort">
+              PuntNetAverage
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='FieldGoalAttempts'; stats.reverseSort = !stats.reverseSort">
+              FieldGoalAttempts
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            <a href="#" ng-click="stats.orderByField='FieldGoalsMade'; stats.reverseSort = !stats.reverseSort">
+              FieldGoalsMade
+            </a>
+              <span ng-show="stats.orderByField == 'Special'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>
+          
+          <!--Situational-->
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='RedZoneAttempts'; stats.reverseSort = !stats.reverseSort">
+              RedZoneAttempts
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>   
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='RedZonePercentage'; stats.reverseSort = !stats.reverseSort">
+              RedZonePercentage
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='ThirdDownAttempts'; stats.reverseSort = !stats.reverseSort">
+              ThirdDownAttempts
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>   
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='ThirdDownPercentage'; stats.reverseSort = !stats.reverseSort">
+              ThirdDownPercentage
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='FourthDownAttempts'; stats.reverseSort = !stats.reverseSort">
+              FourthDownAttempts
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='FourthDownPercentage'; stats.reverseSort = !stats.reverseSort">
+              FourthDownPercentage
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='GoalToGoAttempts'; stats.reverseSort = !stats.reverseSort">
+              GoalToGoAttempts
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='GoalToGoPercentage'; stats.reverseSort = !stats.reverseSort">
+              GoalToGoPercentage
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            <a href="#" ng-click="stats.orderByField='TurnoverDifferential'; stats.reverseSort = !stats.reverseSort">
+              TurnoverDifferential
+            </a>
+              <span ng-show="stats.orderByField == 'Situational'">
+                  <span ng-show="!stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">v</span>
+                  <span ng-show="stats.reverseSort" ng-click="reverseSort = !stats.reverseSort">^</span>
+              </span>
+          </div>  
+        </div>
+
+        <div class="row" ng-repeat="Team in stats.teams|orderBy:stats.orderByField:stats.reverseSort">
+          <div class="cell left" id="teamCell">
+            <a ui-sref="teamPage({index: Team.Team})">{{Team.TeamName}}</a>
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.OffensiveYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.PassingYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.PassingYardsPerAttempt}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.PassingTouchdowns}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.PasserRating}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.CompletionPercentage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.RushingYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.RushingYardsPerAttempt}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.RushingTouchdowns}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Offense">
+            {{Team.TotalScore}}
+          </div>
+
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.OpponentPassingYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.OpponentRushingYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.OpponentFirstDowns}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.Sacks}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.QuarterbackHits}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.TacklesForLoss}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.Takeaways}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.FumblesForced}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.PassesDefended}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Defense">
+            {{Team.OpponentScore}}
+          </div>
+
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.ReturnYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.PuntReturnYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.KickReturnYards}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.KickReturnLong}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.PuntAverage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.PuntNetAverage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.FieldGoalAttempts}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Special">
+            {{Team.FieldGoalsMade}}
+          </div>
+
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.RedZoneAttempts}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.RedZonePercentage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.ThirdDownAttempts}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.ThirdDownPercentage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.FourthDownAttempts}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.FourthDownPercentage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.GoalToGoAttempts}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.GoalToGoPercentage}}
+          </div>
+          <div class="cell" ng-if="stats.statsFields.Situational">
+            {{Team.TurnoverDifferential}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- <navbar></navbar>
+  <div class="content-page">
+    <section class="custom-data">
+      <div class="stat-options">
         <button class="option-button" ng-click="stats.statsFields.PassingYards = !stats.statsFields.PassingYards" ng-class="{'btn_on':stats.statsFields.PassingYards, 'btn_off':!stats.statsFields.PassingYards}">Passing Yards</button>
         <button class="option-button" ng-click="stats.statsFields.RushingYards = !stats.statsFields.RushingYards" ng-class="{'btn_on':stats.statsFields.RushingYards, 'btn_off':!stats.statsFields.RushingYards}">Rushing Yards</button>
         <button class="option-button" ng-click="stats.statsFields.Score = !stats.statsFields.Score" ng-class="{'btn_on':stats.statsFields.Score, 'btn_off':!stats.statsFields.Score}">Total Points</button>
@@ -136,3 +616,4 @@
   </div>
 </div>
 </div>
+ -->

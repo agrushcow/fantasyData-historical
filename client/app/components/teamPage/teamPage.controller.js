@@ -1,11 +1,48 @@
 class TeamPageController {
   constructor(StatsService, $stateParams) {
-    this.name = 'TeamPage';
-    this.teamIndex = $stateParams.index;
-    this.team = StatsService.getTeam(this.teamIndex);
-    console.log(this.teamIndex);
     this.statsFields = StatsService.getStatsFields();
+    StatsService.getAllTeams().then(
+        (data) => {
+/*            this.teams = data[this.teamIndex]; 
+            console.log(this.teamIndex);*/
+            this.teams = data;
+            for(var i = 0; i < data.length; i++) {
+                if(this.teamIndex == this.teams[i].Team) {
 
+                    this.TeamName = this.teams[i].TeamName;
+                    this.OffensiveYardsRank = this.teams[i].OffensiveYardsRank;
+                    this.PassingYards = this.teams[i].PassingYardsRank;
+                    this.PassingYardsPerAttempt = this.teams[i].PassingYardsPerAttemptRank;
+                    this.PassingTouchdowns = this.teams[i].PassingTouchdownsRank;
+                    this.PasserRating  = this.teams[i].PasserRatingRank;
+                    this.CompletionPercentage = this.teams[i].CompletionPercentageRank;
+                    this.RushingYards = this.teams[i].RushingYardsRank;
+                    this.RushingTouchdowns = this.teams[i].RushingTouchdownsRank;
+                    this.RushingYardsPerAttempt = this.teams[i].RushingYardsPerAttemptRank;
+                    this.TotalScore = this.teams[i].TotalScoreRank;
+
+                    this.TeamName = this.teams[i].TeamName;
+                    this.OffensiveYardsRank = this.teams[i].OffensiveYardsRank;
+                    this.PassingYards = this.teams[i].PassingYardsRank;
+                    this.PassingYardsPerAttempt = this.teams[i].PassingYardsPerAttemptRank;
+                    this.PassingTouchdowns = this.teams[i].PassingTouchdownsRank;
+                    this.PasserRating  = this.teams[i].PasserRatingRank;
+                    this.CompletionPercentage = this.teams[i].CompletionPercentageRank;
+                    this.RushingYards = this.teams[i].RushingYardsRank;
+                    this.RushingTouchdowns = this.teams[i].RushingTouchdownsRank;
+                    this.RushingYardsPerAttempt = this.teams[i].RushingYardsPerAttemptRank;
+                }
+            }      
+        });
+
+    this.name = 'teamPage';
+    this.teamIndex = $stateParams.index;
+
+
+    //console.log(this.teamIndex);
+
+    // this.team = StatsService.getTeam(this.teamIndex);
+    // console.log(this.team);
 /*    console.log(this.statsFields);
     this.offYdsRank = this.team.offYds;
     this.offYdsPlayRank = this.team.offYdsPlay;

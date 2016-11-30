@@ -1,21 +1,40 @@
 @import '../common'
 	.hero 
 		background-color #dcdcdc
-		padding 3rem
-		font-size 1.35em
+		padding 2.25em
+		font-size 1.3em
 		height 42em
-		opacity 0.9
 
 	.content 
 		color #0E4362
 
-	.years-form 
-		text-align center
-		margin-top 1.5em
-		color #0E4362
+	.years-container 
+		width 95%
+		margin 0 auto
+		margin-top 1.75em
 
-	.year-value 
-		padding 0 0.5em
+	.year
+		border 2px solid #0E4362
+		width 21%
+		float left
+		margin 0
+		text-align center
+		background-color #F0F8FF
+		padding 0.15em
+
+	.year:hover 
+		background-color black
+		color white
+		cursor pointer
+		font-weight bolder
+
+	.year a 
+		text-decoration none
+		color #3A637C
+
+	.year a:hover 
+		color white
+		background-color black
 
 	.button 
 		border 2px solid blue
@@ -35,14 +54,31 @@
 	.button:hover 
 		cursor pointer
 
+@media screen and (min-width:24em)
+	.year
+		width 22%
+
 @media screen and (min-width:26em)
 	.hero 
-		font-size 1.6em
+		font-size 1.4em
 
-@media screen and (min-width:37em)
+@media screen and (min-width:34em)
 	.hero 
-		font-size 1.85em
+		font-size 1.55em
+
+	.year 
+		width 23%
 
 @media screen and (min-width:56em)
 	.hero
-		font-size 2em
+		font-size 1.75em
+
+	.year 
+		padding 0.25em 0.2em
+
+@media screen and (min-width:74em)
+	.hero
+		font-size 1.8em
+
+	.year 
+		padding 0.3em 0.25em

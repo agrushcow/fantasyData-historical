@@ -10,7 +10,7 @@ let statsModule = angular.module('stats', [
 	"ngInject";
 	$stateProvider
 		.state('stats', {
-			url: '/stats',
+			url: '/stats?year',
 			template: '<stats></stats>'
 		});
 })

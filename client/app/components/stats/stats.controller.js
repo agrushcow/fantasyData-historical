@@ -1,7 +1,8 @@
 class StatsController {
-  constructor(StatsService, $rootScope) {
+  constructor(StatsService, $rootScope, $state) {
+    console.log($state.params.year);
     this.statsFields = StatsService.getStatsFields();
-    StatsService.getAllTeams().then(
+    StatsService.getAllTeams($state.params.year).then(
         (data) => {
         	this.teams = data; 
         	console.log(this.teams);

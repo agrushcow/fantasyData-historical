@@ -3,8 +3,6 @@ class TeamPageController {
     this.statsFields = StatsService.getStatsFields();
     StatsService.getAllTeams().then(
         (data) => {
-/*            this.teams = data[this.teamIndex]; 
-            console.log(this.teamIndex);*/
             this.teams = data;
             for(var i = 0; i < data.length; i++) {
                 if(this.teamIndex == this.teams[i].Team) {
@@ -56,29 +54,6 @@ class TeamPageController {
 
     this.name = 'teamPage';
     this.teamIndex = $stateParams.index;
-
-
-    //console.log(this.teamIndex);
-
-    // this.team = StatsService.getTeam(this.teamIndex);
-    // console.log(this.team);
-/*    console.log(this.statsFields);
-    this.offYdsRank = this.team.offYds;
-    this.offYdsPlayRank = this.team.offYdsPlay;
-    this.passYdsAttRank = this.team.passYdsAtt;
-    this.passRtgRank = this.team.passRtg;
-    this.passYdsRank = this.team.passYdsRank;
-    this.rushYdsRank = this.team.rushYdsRank;
-    this.scoreRank = this.team.scoreRank;
-    this.tdsRank = this.team.tdsRank;
-    this.thirdDownPercRank = this.team.thirdDownPerc;
-    this.firstDownsRank = this.team.firstDowns;
-
-    this.opponentPassingYardsRank = this.team.opponentPassingYards;
-    this.opponentRushingYardsRank = this.team.opponentRushingYards;
-    this.takewaysRank = this.team.takeways;
-    this.toDiffRank = this.team.toDiff;
-    this.penaltiesRank = this.team.penalties;*/
   }
 }
 

@@ -88,9 +88,9 @@ class StatsService {
         return this.statsFields;
     }
 
-    getAllTeams() {
+    getAllTeams(year) {
         const {$http} = this;
-        return $http.get("https://mysterious-falls-52077.herokuapp.com/season")
+        return $http.get("https://mysterious-falls-52077.herokuapp.com/season/" + year )
             .then(res => {
                 this.teams = res.data.body;
                 this.calculateRank();

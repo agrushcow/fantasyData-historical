@@ -2,10 +2,10 @@
   <div class="content-page">
     <section class="custom-data">
       <div class="stat-options">
-        <button class="option-button" ng-click="stats.statsFields.Offense = !stats.statsFields.Offense" ng-class="{'btn_on':stats.statsFields.Offense, 'btn_off':!stats.statsFields.Offense}">Offense</button>
-        <button class="option-button" ng-click="stats.statsFields.Defense = !stats.statsFields.Defense" ng-class="{'btn_on':stats.statsFields.Defense, 'btn_off':!stats.statsFields.Defense}">Defense</button>
-        <button class="option-button" ng-click="stats.statsFields.Special = !stats.statsFields.Special" ng-class="{'btn_on':stats.statsFields.Special, 'btn_off':!stats.statsFields.Special}">Special Teams</button>
-        <button class="option-button" ng-click="stats.statsFields.Situational = !stats.statsFields.Situational" ng-class="{'btn_on':stats.statsFields.Situational, 'btn_off':!stats.statsFields.Situational}">Situational</button>
+        <button class="option-button" ng-click="stats.statsFields.Defense = false; stats.statsFields.Special = false; stats.statsFields.Situational = false; stats.statsFields.Offense = !stats.statsFields.Offense" ng-class="{'btn_on':stats.statsFields.Offense, 'btn_off':!stats.statsFields.Offense}">Offense</button>
+        <button class="option-button" ng-click="stats.statsFields.Offense = false; stats.statsFields.Special = false; stats.statsFields.Situational = false; stats.statsFields.Defense = !stats.statsFields.Defense" ng-class="{'btn_on':stats.statsFields.Defense, 'btn_off':!stats.statsFields.Defense}">Defense</button>
+        <button class="option-button" ng-click="stats.statsFields.Offense = false; stats.statsFields.Defense = false; stats.statsFields.Situational = false; stats.statsFields.Special = !stats.statsFields.Special" ng-class="{'btn_on':stats.statsFields.Special, 'btn_off':!stats.statsFields.Special}">Special Teams</button>
+        <button class="option-button" ng-click="stats.statsFields.Offense = false; stats.statsFields.Defense = false; stats.statsFields.Special = false; stats.statsFields.Situational = !stats.statsFields.Situational" ng-class="{'btn_on':stats.statsFields.Situational, 'btn_off':!stats.statsFields.Situational}">Situational</button>
       </div>
     </section>
     <div class="wrapper">

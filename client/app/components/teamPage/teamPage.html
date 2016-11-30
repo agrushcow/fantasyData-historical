@@ -6,360 +6,205 @@
 	  </div>
 	</div>
 
-<div class="container">
-  <div class="wrapper">
-    <div class="table team-table">
-      <div class="row header" id="main">
-        <div class="cell tp right"><h3>Offense</h3></div>
-        <div class="cell tp"></div>
+  <div class="container">
+    <div class="wrapper-tp">
+      <div class="table team-table">
+        <div class="row header" id="main">
+          <div class="cell tp right"><h3>Offense</h3></div>
+          <div class="cell tp"></div>
+        </div>
+        <div class="row header">
+          <div class="cell tp"><h3>Category</h3></div>
+          <div class="cell tp"><h3>Rank</h3></div>
+        </div>
+        <div class="row">
+          <div class="cell tp">Offensive Yards</div>
+          <div class="cell tp">{{teamPage.OffensiveYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Passing Yards</div>
+          <div class="cell tp">{{teamPage.PassingYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Passing Yards Per Attempt</div>
+          <div class="cell tp">{{teamPage.PassingYardsPerAttemptRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Passing Touchdowns</div>
+          <div class="cell tp">{{teamPage.PassingTouchdownsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Passer Rating</div>
+          <div class="cell tp">{{teamPage.PasserRatingRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Completion Percentage</div>
+          <div class="cell tp">{{teamPage.CompletionPercentageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Rushing Yards</div>
+          <div class="cell tp">{{teamPage.RushingYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Rushing Touchdowns</div>
+          <div class="cell tp">{{teamPage.RushingTouchdownsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Rushing Yards Per Attempt</div>
+          <div class="cell tp">{{teamPage.RushingYardsPerAttemptRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Total Score</div>
+          <div class="cell tp">{{teamPage.TotalScoreRank}}</div>   
+        </div>
       </div>
-      <div class="row header">
-        <div class="cell tp"><h3>Category</h3></div>
-        <div class="cell tp"><h3>Rank</h3></div>
+    </div>
+
+    <div class="wrapper-tp">
+      <div class="table Team-table">
+        <div class="row header" id="main">
+          <div class="cell tp right"><h3>Defense</h3></div>
+          <div class="cell tp"></div>
+        </div>
+        <div class="row header">
+          <div class="cell tp"><h3>Category</h3></div>
+          <div class="cell tp"><h3>Rank</h3></div>
+        </div>
+        <div class="row">
+          <div class="cell tp">OpponentPassingYards</div>
+          <div class="cell tp">{{teamPage.OpponentPassingYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">OpponentRushingYards</div>
+          <div class="cell tp">{{teamPage.OpponentRushingYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">OpponentFirstDowns</div>
+          <div class="cell tp">{{teamPage.OpponentFirstDownsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Sacks</div>
+          <div class="cell tp">{{teamPage.SacksRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">QuarterbackHits</div>
+          <div class="cell tp">{{teamPage.QuarterbackHitsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">TacklesForLoss</div>
+          <div class="cell tp">{{teamPage.TacklesForLossRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">Takeaways</div>
+          <div class="cell tp">{{teamPage.TakeawaysRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">FumblesForced</div>
+          <div class="cell tp">{{teamPage.FumblesForcedRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">PassesDefended</div>
+          <div class="cell tp">{{teamPage.PassesDefendedRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">OpponentScore</div>
+          <div class="cell tp">{{teamPage.OpponentScoreRank}}</div>   
+        </div>
       </div>
-      <div class="row">
-        <div class="cell tp">Offensive Yards</div>
-        <div class="cell tp">{{teamPage.OffensiveYardsRank}}</div>   
+    </div>
+
+    <div class="wrapper-tp">
+      <div class="table Team-table">
+        <div class="row header" id="main">
+          <div class="cell tp right"><h3>Special Teams</h3></div>
+          <div class="cell tp"></div>
+        </div>
+        <div class="row header">
+          <div class="cell tp"><h3>Category</h3></div>
+          <div class="cell tp"><h3>Rank</h3></div>
+        </div>
+        <div class="row">
+          <div class="cell tp">ReturnYards</div>
+          <div class="cell tp">{{teamPage.ReturnYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">PuntReturnYards</div>
+          <div class="cell tp">{{teamPage.PuntReturnYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">KickReturnYards</div>
+          <div class="cell tp">{{teamPage.KickReturnYardsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">KickReturnLong</div>
+          <div class="cell tp">{{teamPage.KickReturnLongRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">PuntAverage</div>
+          <div class="cell tp">{{teamPage.PuntAverageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">PuntNetAverage</div>
+          <div class="cell tp">{{teamPage.PuntNetAverageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">FieldGoalAttempts</div>
+          <div class="cell tp">{{teamPage.FieldGoalAttemptsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">FieldGoalsMade</div>
+          <div class="cell tp">{{teamPage.FieldGoalsMadeRank}}</div>   
+        </div>
       </div>
-      <div class="row">
-        <div class="cell tp">Passing Yards</div>
-        <div class="cell tp">{{teamPage.PassingYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Passing Yards Per Attempt</div>
-        <div class="cell tp">{{teamPage.PassingYardsPerAttemptRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Passing Touchdowns</div>
-        <div class="cell tp">{{teamPage.PassingTouchdownsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Passer Rating</div>
-        <div class="cell tp">{{teamPage.PasserRatingRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Completion Percentage</div>
-        <div class="cell tp">{{teamPage.CompletionPercentageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Rushing Yards</div>
-        <div class="cell tp">{{teamPage.RushingYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Rushing Touchdowns</div>
-        <div class="cell tp">{{teamPage.RushingTouchdownsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Rushing Yards Per Attempt</div>
-        <div class="cell tp">{{teamPage.RushingYardsPerAttemptRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Total Score</div>
-        <div class="cell tp">{{teamPage.TotalScoreRank}}</div>   
+    </div>
+
+    <div class="wrapper-tp">
+      <div class="table Team-table">
+        <div class="row header" id="main">
+          <div class="cell tp right"><h3>Situational</h3></div>
+          <div class="cell tp"></div>
+        </div>
+        <div class="row header">
+          <div class="cell tp"><h3>Category</h3></div>
+          <div class="cell tp"><h3>Rank</h3></div>
+        </div>
+        <div class="row">
+          <div class="cell tp">RedZoneAttempts</div>
+          <div class="cell tp">{{teamPage.RedZoneAttemptsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">RedZonePercentage</div>
+          <div class="cell tp">{{teamPage.RedZonePercentageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">ThirdDownAttempts</div>
+          <div class="cell tp">{{teamPage.ThirdDownAttemptsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">ThirdDownPercentage</div>
+          <div class="cell tp">{{teamPage.ThirdDownPercentageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">FourthDownAttempts</div>
+          <div class="cell tp">{{teamPage.FourthDownAttemptsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">FourthDownPercentage</div>
+          <div class="cell tp">{{teamPage.FourthDownPercentageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">GoalToGoAttempts</div>
+          <div class="cell tp">{{teamPage.GoalToGoAttemptsRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">GoalToGoPercentage</div>
+          <div class="cell tp">{{teamPage.GoalToGoPercentageRank}}</div>   
+        </div>
+        <div class="row">
+          <div class="cell tp">TurnoverDifferential</div>
+          <div class="cell tp">{{teamPage.TurnoverDifferentialRank}}</div>   
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="wrapper">
-    <div class="table Team-table">
-      <div class="row header" id="main">
-        <div class="cell tp right"><h3>Defense</h3></div>
-        <div class="cell tp"></div>
-      </div>
-      <div class="row header">
-        <div class="cell tp"><h3>Category</h3></div>
-        <div class="cell tp"><h3>Rank</h3></div>
-      </div>
-      <div class="row">
-        <div class="cell tp">OpponentPassingYards</div>
-        <div class="cell tp">{{teamPage.OpponentPassingYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">OpponentRushingYards</div>
-        <div class="cell tp">{{teamPage.OpponentRushingYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">OpponentFirstDowns</div>
-        <div class="cell tp">{{teamPage.OpponentFirstDownsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Sacks</div>
-        <div class="cell tp">{{teamPage.SacksRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">QuarterbackHits</div>
-        <div class="cell tp">{{teamPage.QuarterbackHitsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">TacklesForLoss</div>
-        <div class="cell tp">{{teamPage.TacklesForLossRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">Takeaways</div>
-        <div class="cell tp">{{teamPage.TakeawaysRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">FumblesForced</div>
-        <div class="cell tp">{{teamPage.FumblesForcedRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">PassesDefended</div>
-        <div class="cell tp">{{teamPage.PassesDefendedRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">OpponentScore</div>
-        <div class="cell tp">{{teamPage.OpponentScoreRank}}</div>   
-      </div>
-    </div>
-  </div>
-
-  <div class="wrapper">
-    <div class="table Team-table">
-      <div class="row header" id="main">
-        <div class="cell tp right"><h3>Special Teams</h3></div>
-        <div class="cell tp"></div>
-      </div>
-      <div class="row header">
-        <div class="cell tp"><h3>Category</h3></div>
-        <div class="cell tp"><h3>Rank</h3></div>
-      </div>
-      <div class="row">
-        <div class="cell tp">ReturnYards</div>
-        <div class="cell tp">{{teamPage.ReturnYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">PuntReturnYards</div>
-        <div class="cell tp">{{teamPage.PuntReturnYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">KickReturnYards</div>
-        <div class="cell tp">{{teamPage.KickReturnYardsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">KickReturnLong</div>
-        <div class="cell tp">{{teamPage.KickReturnLongRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">PuntAverage</div>
-        <div class="cell tp">{{teamPage.PuntAverageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">PuntNetAverage</div>
-        <div class="cell tp">{{teamPage.PuntNetAverageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">FieldGoalAttempts</div>
-        <div class="cell tp">{{teamPage.FieldGoalAttemptsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">FieldGoalsMade</div>
-        <div class="cell tp">{{teamPage.FieldGoalsMade}}</div>   
-      </div>
-    </div>
-  </div>
-
-  <div class="wrapper">
-    <div class="table Team-table">
-      <div class="row header" id="main">
-        <div class="cell tp right"><h3>Situational</h3></div>
-        <div class="cell tp"></div>
-      </div>
-      <div class="row header">
-        <div class="cell tp"><h3>Category</h3></div>
-        <div class="cell tp"><h3>Rank</h3></div>
-      </div>
-      <div class="row">
-        <div class="cell tp">RedZoneAttempts</div>
-        <div class="cell tp">{{teamPage.RedZoneAttemptsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">RedZonePercentage</div>
-        <div class="cell tp">{{teamPage.RedZonePercentageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">ThirdDownAttempts</div>
-        <div class="cell tp">{{teamPage.ThirdDownAttemptsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">ThirdDownPercentage</div>
-        <div class="cell tp">{{teamPage.ThirdDownPercentageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">FourthDownAttempts</div>
-        <div class="cell tp">{{teamPage.FourthDownAttemptsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">FourthDownPercentage</div>
-        <div class="cell tp">{{teamPage.FourthDownPercentageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">GoalToGoAttempts</div>
-        <div class="cell tp">{{teamPage.GoalToGoAttemptsRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">GoalToGoPercentage</div>
-        <div class="cell tp">{{teamPage.GoalToGoPercentageRank}}</div>   
-      </div>
-      <div class="row">
-        <div class="cell tp">TurnoverDifferential</div>
-        <div class="cell tp">{{teamPage.TurnoverDifferentialRank}}</div>   
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
-<!-- this.TeamName = this.teams[i].TeamName;
-this.OffensiveYardsRank = this.teams[i].OffensiveYardsRank;
-this.PassingYards = this.teams[i].PassingYardsRank;
-this.PassingYardsPerAttempt = this.teams[i].PassingYardsPerAttemptRank;
-this.PassingTouchdowns = this.teams[i].PassingTouchdownsRank;
-this.PasserRating  = this.teams[i].PasserRatingRank;
-this.CompletionPercentage = this.teams[i].CompletionPercentageRank;
-this.RushingYards = this.teams[i].RushingYardsRank;
-this.RushingTouchdowns = this.teams[i].RushingTouchdownsRank;
-this.RushingYardsPerAttempt = this.teams[i].RushingYardsPerAttemptRank;
-this.TotalScore = this.teams[i].TotalScoreRank; -->
-
-<!--   <div class="wrapper">
-    <div class="table Team-table">
-      <div class="row header">
-        <div class="cell tp">
-          <span>Category</span>
-        </div>
-        <div class="cell">
-          <span>Rank</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.passYds">
-          <span>Passing Yards</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.passYds">
-          <span>{{TeamPage.passYdsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.rushYds">
-          <span>Rushing Yards</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.rushYds">
-          <span>{{TeamPage.rushYdsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.score">
-          <span>Score</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.score">
-          <span>{{TeamPage.scoreRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.tds">
-          <span>TD's</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.tds">
-          <span>{{TeamPage.tdsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.toDiff">
-          <span>Turnover Differential</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.toDiff">
-          <span>{{TeamPage.toDiffRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.opponentPassingYards">
-          <span>Opponent Passing Yards</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.opponentPassingYards">
-          <span>{{TeamPage.opponentPassingYardsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.opponentRushingYards">
-          <span>Opponent Rushing Yards</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.opponentRushingYards">
-          <span>{{TeamPage.opponentRushingYardsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.offYds">
-          <span>Offensive Yards</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.offYds">
-          <span>{{TeamPage.offYdsRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.offYdsPlay">
-          <span>Offensive Yards per Play</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.offYdsPlay">
-          <span>{{TeamPage.offYdsPlayRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.takeways">
-          <span>Takeaways</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.takeways">
-          <span>{{TeamPage.takewaysRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.takeways">
-          <span>Takeaways</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.takeways">
-          <span>{{TeamPage.takewaysRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.passYdsAtt">
-          <span>Pass Yards per Attempt</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.passYdsAtt">
-          <span>{{TeamPage.passYdsAttRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.passRtg">
-          <span>Passer Rating</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.passRtg">
-          <span>{{TeamPage.passRtgRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.thirdDownPerc">
-          <span>Third Down %</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.thirdDownPerc">
-          <span>{{TeamPage.thirdDownPercRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.penalties">
-          <span>Penalties</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.penalties">
-          <span>{{TeamPage.penaltiesRank}}</span>
-        </div>
-      </div>
-      <div class="row">
-        <div class="cell tp" ng-if="TeamPage.statsFields.firstDowns">
-          <span>First Downs</span>
-        </div>
-        <div class="cell tp" ng-if="TeamPage.statsFields.firstDowns">
-          <span>{{TeamPage.firstDownsRank}}</span>
-        </div>
-      </div>
-    </div>
-  </div> -->
 </div>

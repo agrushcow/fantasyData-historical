@@ -4,6 +4,7 @@ class TeamPageController {
     StatsService.getAllTeams().then(
         (data) => {
             this.teams = data;
+            console.log(this.teams);
             for(var i = 0; i < data.length; i++) {
                 if(this.teamIndex == this.teams[i].Team) {
 

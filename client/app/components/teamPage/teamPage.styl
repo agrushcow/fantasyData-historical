@@ -1,11 +1,5 @@
-	.container
+	#team-container
 		width 100%
-		display flex
-		justify-content center
-
-	.wrapper-tp
-		width 23.5%
-		display inline-table
 
 	#main 
 		background-color #0E4362
@@ -29,3 +23,17 @@
 
 	.team-table
 		width 0
+
+@media screen and (min-width:37em)
+	#team-container 
+		text-align center
+
+	.wrapper-tp
+		width 45%
+		display inline-table
+		margin 1em
+
+@media screen and (min-width:57.75em)
+	.wrapper-tp
+		width 22%
+		margin 0

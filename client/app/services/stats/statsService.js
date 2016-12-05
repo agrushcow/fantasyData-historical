@@ -1,7 +1,7 @@
 class StatsService {
 	constructor($resource, $http) {
 		Object.assign(this, { $resource, $http });
-
+        this.year=2015;
         this.statsFields = {
             name:'stats',  
             orderByField: 'Team',
@@ -80,8 +80,6 @@ class StatsService {
             GoalToGoPercentage: 0,
             TurnoverDifferential: 0
       }]
-
-	this.calculateRank();
 }
 
     getStatsFields() {
@@ -89,14 +87,16 @@ class StatsService {
     }
 
     getAllTeams(year) {
-        const {$http} = this;
-        return $http.get("https://mysterious-falls-52077.herokuapp.com/season/" + year )
-            .then(res => {
-                this.teams = res.data.body;
-                this.calculateRank();
-                    return this.teams;
-            });
-    }   
+            const {$http} = this;
+            year = year ? year : this.year;
+            this.year = year;
+            return $http.get("https://mysterious-falls-52077.herokuapp.com/season/" + year )
+                .then(res => {
+                    this.teams = res.data.body;
+                    this.calculateRank();
+                        return this.teams;
+                });
+     }   
 
     getTeam(index) {
         for (let i in this.teams) {
@@ -108,6 +108,7 @@ class StatsService {
 
     /*Calculates the rank in each statistical category of a given Team against other teams*/
     calculateRank() {
+        console.log(this.teams);
 
         /*-----Offensive Stats------*/
 

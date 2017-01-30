@@ -14,8 +14,7 @@ angular.module('app', [
     resource,
     Common.name,
     Components.name,
-    Services.name,
-    angularResource
+    Services.name
   ])
   .config(($locationProvider) => {
     "ngInject";

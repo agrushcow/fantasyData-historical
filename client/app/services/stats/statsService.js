@@ -1,6 +1,7 @@
 class StatsService {
-	constructor($resource, $http) {
-		Object.assign(this, { $resource, $http });
+    constructor($resource, $http) {
+    "ngInject";
+        Object.assign(this, { $resource, $http });
         this.year=2015;
         this.statsFields = {
             name:'stats',  

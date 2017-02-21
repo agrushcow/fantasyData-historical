@@ -23,8 +23,14 @@ angular.module('app', [
     $locationProvider.html5Mode(true).hashPrefix('!');
   })
 
-  .run (function ($http) {
+.run (function ($http) {
+    "ngInject";
 $http.defaults.headers.common["Ocp-Apim-Subscription-Key"] = "c5a2574a06ce45ab89299fbc37c11ee4";
   })
+
+//   .run (function ($http) {
+// $http.defaults.headers.common["Ocp-Apim-Subscription-Key"] = "c5a2574a06ce45ab89299fbc37c11ee4";
+
+//   })
 
   .component('app', AppComponent);

@@ -13,9 +13,12 @@ In an easy to digest format, users are able to look at data spanning back to 198
 <li>CSS3/Stylus</li>
 <li>Ecmascript 7</li>
 <li>Angular 1.5</li>
-<li>Gulp</li>
-<li>Webpack</li>
-<li>Babel</li>
+
+# Testing
+<li>Karma</li>
+<li>Webpack + Babel</li>
+<li>Mocha</li>
+<li>Chai</li>
 
 # Responsive
 This app is fully responsive on all screen sizes. 
